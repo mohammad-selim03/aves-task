@@ -1,6 +1,7 @@
 import React from "react";
 
-const DynamicCard = ({ stepsProps, icon, bg, textColor }) => {
+const DynamicCard = ({ stepsProps, icon, bg, textColor, text, progress }) => {
+  console.log("progress", progress);
   return (
     <div>
       {stepsProps ? (
@@ -13,14 +14,17 @@ const DynamicCard = ({ stepsProps, icon, bg, textColor }) => {
                 {icon}
               </p>
             </div>{" "}
-            <div>
-              <p>Set up your calender</p>
+            <div className="flex flex-col gap-3">
+              {<p>{text}</p>}
 
-              <div class="w-full bg-gray-50 rounded-full h-2.5 dark:bg-gray-200">
-                <div
-                  className={`bg-${textColor} h-2.5 rounded-full`}
-                  style={{width: "75%"}}
-                ></div>
+              <div className="flex items-center gap-3 w-1/2">
+                <div class="w-full bg-gray-100 rounded-full h-2.5 dark:bg-gray-200 ">
+                  <div
+                    className={`bg-${textColor} h-2.5 rounded-full`}
+                    style={{ width: "60%" }}
+                  ></div>
+                </div>
+                  4/6
               </div>
             </div>
           </div>

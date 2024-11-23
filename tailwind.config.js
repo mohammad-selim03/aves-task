@@ -9,7 +9,13 @@ module.exports = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {
+			// Add custom colors or use Tailwind's defaults
+			background: 'white', // light mode background
+			'background-dark': 'black', // dark mode background
+			text: 'black', // light mode text
+			'text-dark': 'white', // dark mode text
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],

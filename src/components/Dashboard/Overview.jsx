@@ -1,18 +1,15 @@
 import React from "react";
-import DynamicCard from "./DynamicCard";
-import { IoIosArrowDown } from "react-icons/io";
 import userImg from "../../assets/men.jpeg";
-import PropertyForm from "./PropertyForm";
 
-const Overview = ({ addProperty, properties }) => {
+const Overview = ({ properties = [] }) => {
   return (
-    <div className="py-20 px-20">
+    <div className="py-20 px-3 md:px-20">
       <div className="flex items-center justify-between py-5">
         <div className="flex items-center gap-5">
           <p>
             <img
-              src={userImg}
-              alt="user img"
+              src={userImg} // Replace with a valid image URL if required
+              alt="User"
               className="h-14 w-14 rounded-full object-cover"
             />
           </p>
@@ -23,16 +20,19 @@ const Overview = ({ addProperty, properties }) => {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-5">
-          <button className="bg-white border border-gray-400 rounded-3xl px-3 py-1.5 flex items-center gap-2 font-semibold text-gray-800">
-            Last month <IoIosArrowDown />
-          </button>
-          <PropertyForm addProperty={addProperty} />
-        </div>
       </div>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {properties.map((property, index) => (
-          <DynamicCard key={index} property={property} />
+        <div
+          key={index}
+          className="border rounded-xl p-4 shadow hover:shadow-md"
+        >
+          <h4 className="text-lg font-semibold">{property.name}</h4>
+          <p className="text-sm text-gray-600">{property.location}</p>
+          <p className="text-sm text-gray-500">
+            ${property.price} | {property.type}
+          </p>
+        </div>
         ))}
       </div>
     </div>

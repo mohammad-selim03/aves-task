@@ -12,7 +12,8 @@ const Steps = () => {
           icon={<PiWarningCircleLight />}
           progress="40"
           bg="bg-red-100"
-          textColor="red-600"
+          textColor="red-500"
+          text="Set up your calender"
         />
         <DynamicCard
           stepsProps={"stepsProps"}
@@ -20,7 +21,7 @@ const Steps = () => {
           progress="75"
           bg="bg-green-100"
           textColor="green-600"
-
+          text="Increase your bookings"
         />
       </div>
     </div>
