@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { IoNotifications } from "react-icons/io5";
 import userImg from "../../assets/men.jpeg";
-import ToggleButton from "./ToggleButton";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
+import ToggleButton from "../DynamicComponents/ToggleButton";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("dashboard"); // Set default active menu

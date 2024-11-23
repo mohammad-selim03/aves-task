@@ -1,7 +1,7 @@
 import React from "react";
 
 const DynamicCard = ({ stepsProps, icon, bg, textColor, text, progress }) => {
-  console.log("progress", progress);
+ 
   return (
     <div>
       {stepsProps ? (

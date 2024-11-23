@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import PropertyForm from "./PropertyForm";
-import { SelectDropdown } from "./Select";
+import { SelectDropdown } from "../DynamicComponents/Select";
+import PropertyForm from "../DynamicComponents/PropertyForm";
 
 export const AvailableData = ["All", "Available", "Rented"];
 export const TypeData = ["All", "Apartment", "House", "Commercial"];

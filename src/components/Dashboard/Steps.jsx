@@ -1,6 +1,6 @@
 import React from "react";
-import DynamicCard from "./DynamicCard";
 import { PiPulse, PiWarningCircleLight } from "react-icons/pi";
+import DynamicCard from "../DynamicComponents/DynamicCard";
 
 const Steps = () => {
   return (
@@ -14,6 +14,7 @@ const Steps = () => {
           bg="bg-red-100"
           textColor="red-500"
           text="Set up your calender"
+         
         />
         <DynamicCard
           stepsProps={"stepsProps"}
@@ -22,6 +23,7 @@ const Steps = () => {
           bg="bg-green-100"
           textColor="green-600"
           text="Increase your bookings"
+
         />
       </div>
     </div>

@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import toast from "react-hot-toast";
-import { IoIosArrowDown } from "react-icons/io";
 import { SelectDropdown } from "./Select";
 
 export const AvailableData = ["All", "Available", "Rented"];
@@ -26,11 +25,11 @@ const PropertyForm = ({ addProperty }) => {
   });
 
   const [popoverOpen, setPopoverOpen] = useState(false); // State to control popover visibility
+
   const handleChange = (field) => (e) => {
-    const value = e.target ? e.target.value : e; // Check if `e` is a DOM event
+    const value = e.target ? e.target.value : e; // Handle both input and dropdown changes
     setProperty((prev) => ({ ...prev, [field]: value }));
   };
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,8 +47,6 @@ const PropertyForm = ({ addProperty }) => {
     setPopoverOpen(false); // Close the popover after saving
   };
 
-  const rentalData = ["Available", "Rented"];
-
   return (
     <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
       <PopoverTrigger asChild>
@@ -62,7 +59,7 @@ const PropertyForm = ({ addProperty }) => {
         </Button>
       </PopoverTrigger>
       {popoverOpen && (
-        <PopoverContent className="w-96 p-4 fixed -top-80 md:top-1/2 left-0 md:-left-80 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-green-100 shadow-lg rounded-lg z-50 ">
+        <PopoverContent className="w-96 p-4 fixed -top-80 md:top-1/2 left-0 md:-left-80 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-green-100 shadow-lg rounded-lg z-50">
           <h4 className="font-medium leading-none mb-4 text-xl">
             Add Property
           </h4>
@@ -99,8 +96,8 @@ const PropertyForm = ({ addProperty }) => {
                   id={id}
                   name={id}
                   type={type}
-                  value={property[id]}
-                  onChange={handleChange}
+                  value={property[id]} // Bind the value correctly
+                  onChange={handleChange(id)} // Pass the field name
                   placeholder={placeholder}
                   required
                 />
@@ -108,44 +105,21 @@ const PropertyForm = ({ addProperty }) => {
             ))}
             <div className="grid gap-2">
               <Label htmlFor="type">Property Type</Label>
-              {/* <select
-                id="type"
-                name="type"
-                value={property.type}
-                onChange={handleChange}
-                className="border rounded px-3 py-2 w-full"
-                required
-              >
-                <option value="Apartment">Apartment</option>
-                <option value="House">House</option>
-                <option value="Commercial">Commercial</option>
-              </select> */}
               <SelectDropdown
-                placeholder={"Select Type Status"}
+                placeholder={"Select Property Type"}
                 item={TypeData}
-                value={property.TypeData}
-                onChange={handleChange("type")}
+                value={property.type} // Correctly bind the value
+                onChange={handleChange("type")} // Pass the correct field name
                 className="w-full"
               />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="rentalStatus">Rental Status</Label>
-              {/* <select
-                id="rentalStatus"
-                name="rentalStatus"
-                value={property.rentalStatus}
-                onChange={handleChange}
-                className="border rounded px-3 py-2 w-full"
-                required
-              >
-                <option value="Available">Available</option>
-                <option value="Rented">Rented</option>
-              </select> */}
               <SelectDropdown
                 placeholder={"Select Rental Status"}
                 item={AvailableData}
-                value={property.AvailableData}
-                onChange={handleChange("rentalStatus")}
+                value={property.rentalStatus} // Correctly bind the value
+                onChange={handleChange("rentalStatus")} // Pass the correct field name
                 className="w-full"
               />
             </div>
@@ -154,15 +128,14 @@ const PropertyForm = ({ addProperty }) => {
               <textarea
                 id="description"
                 name="description"
-                value={property.description}
-                onChange={handleChange}
+                value={property.description} // Bind the value correctly
+                onChange={handleChange("description")} // Pass the correct field name
                 className="border rounded px-3 py-2 w-full"
                 placeholder="Enter description"
                 required
               ></textarea>
             </div>
             <div className="flex items-center justify-center">
-              {" "}
               <Button
                 type="submit"
                 variant="default"
@@ -174,17 +147,6 @@ const PropertyForm = ({ addProperty }) => {
           </form>
         </PopoverContent>
       )}
-      {
-        // {
-        //   name: "Beachside Villa",
-        //   location: "123 Seaview Lane, Coastal City",
-        //   price: "3500",
-        //   size: "1500",
-        //   description: "A luxurious villa overlooking the ocean, perfect for a serene getaway.",
-        //   type: "House",
-        //   rentalStatus: "Available"
-        // }
-      }
     </Popover>
   );
 };
