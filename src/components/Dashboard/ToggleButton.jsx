@@ -1,13 +1,11 @@
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { useTheme } from "../Theme/ThemeContext"; // Import the theme context
+import { useTheme } from "../Theme/ThemeContext";
 
 export function ToggleButton() {
-  const { isDarkMode, setIsDarkMode } = useTheme(); // Access theme state and setter
+  const { isDarkMode, setIsDarkMode } = useTheme();
 
-  const handleChange = () => {
-    setIsDarkMode(!isDarkMode); // Toggle dark mode
-  };
+  const handleChange = () => setIsDarkMode((prev) => !prev);
 
   return (
     <div className="flex items-center space-x-2">
@@ -16,10 +14,11 @@ export function ToggleButton() {
       </Label>
       <Switch
         id="theme-toggle"
-        checked={isDarkMode} // Reflect the current theme
-        onCheckedChange={handleChange} // Toggle on switch change
+        checked={isDarkMode}
+        onCheckedChange={handleChange}
       />
     </div>
   );
 }
-export default ToggleButton
+
+export default ToggleButton;

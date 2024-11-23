@@ -55,7 +55,7 @@ const Navbar = () => {
             {menusData.map((item, index) => (
               <p
                 key={index}
-                className={`capitalize cursor-pointer px-3 py-1 rounded-xl transition-all duration-300 ${
+                className={`capitalize cursor-pointer px-3 py-1  rounded-xl transition-all duration-300 ${
                   activeMenu === item.title
                     ? "text-green-600 bg-green-100 font-semibold"
                     : "text-gray-500"
