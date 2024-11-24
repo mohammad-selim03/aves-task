@@ -32,20 +32,17 @@ LocalStorage: Persistent data storage without a backend.
 
 🚀 How to Run the Project
 
-Clone the Repository
-
-Clone the repository to your local machine:
-
+Clone the Repository : https://github.com/mohammad-selim03/aves-task.git
 
 bash
 Copy code
-git clone https://github.com/your-username/property-management-dashboard.git
+git clone https://github.com/mohammad-selim03/aves-task.git
 Navigate to the Project Folder
 
 
 bash
 Copy code
-cd property-management-dashboard
+cd aves-task
 Install Dependencies
 If you're using React or another framework, install the required dependencies:
 
@@ -54,12 +51,12 @@ bash
 Copy code
 npm install
 Run the Project
-Start the development server:
+Start the development server: npm run dev
 
 
 bash
 Copy code
-npm start
+npm run dev
 Open in Browser
 Open your browser and navigate to:
 
