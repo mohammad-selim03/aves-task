@@ -1,4 +1,5 @@
 📖 Project Overview
+
 This dashboard enables users to:
 
 View Properties: A dynamic list of properties displayed with key details.
@@ -17,20 +18,30 @@ This project emphasizes clean design, responsiveness, and user interactivity whi
 
 
 🛠️ Tools and Technologies
+
 HTML5: Semantic structure for web content.
+
 CSS3 / Tailwind CSS and Shadcn UI: Used for responsive and modern styling.
+
 JavaScript (ES6+): Dynamic functionality and interactivity.
+
 React.js: Component-based development for a structured UI.
+
 LocalStorage: Persistent data storage without a backend.
 
+
 🚀 How to Run the Project
+
 Clone the Repository
+
 Clone the repository to your local machine:
+
 
 bash
 Copy code
 git clone https://github.com/your-username/property-management-dashboard.git
 Navigate to the Project Folder
+
 
 bash
 Copy code
@@ -38,11 +49,13 @@ cd property-management-dashboard
 Install Dependencies
 If you're using React or another framework, install the required dependencies:
 
+
 bash
 Copy code
 npm install
 Run the Project
 Start the development server:
+
 
 bash
 Copy code
@@ -50,6 +63,5 @@ npm start
 Open in Browser
 Open your browser and navigate to:
 
-arduino
-Copy code
+On the browser type : 
 http://localhost:3000
