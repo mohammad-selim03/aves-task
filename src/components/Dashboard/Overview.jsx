@@ -1,5 +1,6 @@
 import React from "react";
 import userImg from "../../assets/men.jpeg";
+import Keys from "../DynamicComponents/Keys";
 
 // PropertyCard Component to Render Each Property Item
 const PropertyCard = ({ name, location, price, type }) => {
@@ -31,8 +32,9 @@ const Overview = ({ properties = [] }) => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {properties.map((property, index) => (
+      <div className="">
+        <Keys />
+        {/* {properties.map((property, index) => (
           <PropertyCard
             key={index}
             name={property.name}
@@ -40,7 +42,7 @@ const Overview = ({ properties = [] }) => {
             price={property.price}
             type={property.type}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
