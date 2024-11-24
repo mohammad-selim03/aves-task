@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="bg-slate-50/50">
+    <div className="bg-slate-50/50 dark:bg-black/80">
       <Navbar />
       <Overview properties={properties} />
       <div className="flex flex-col md:grid md:grid-cols-12 gap-5 px-3 lg:px-20">

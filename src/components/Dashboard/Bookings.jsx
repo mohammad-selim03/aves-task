@@ -4,7 +4,7 @@ import furnitureImg from "../../assets/furnitures.jpg";
 // BookingCard Component to Render Each Booking Item
 const BookingCard = ({ imgSrc, address, dateRange, duration, amount }) => {
   return (
-    <div className="flex items-center justify-between gap-5">
+    <div className="flex items-center justify-between gap-5 dark:text-white">
       <img
         src={imgSrc}
         alt="Booking"

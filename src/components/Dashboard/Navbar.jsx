@@ -4,6 +4,7 @@ import { IoNotifications } from "react-icons/io5";
 import userImg from "../../assets/men.jpeg";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
 import ToggleButton from "../DynamicComponents/ToggleButton";
+import { AiFillPropertySafety } from "react-icons/ai";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("dashboard"); // Set default active menu
@@ -29,10 +30,10 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between font-semibold text-gray-700 border-b-2 border-gray-200 p-5">
-      <div>
-        <ToggleButton />
-      </div>
       {/* Menu button for small screens */}
+        <div>
+          <p><AiFillPropertySafety size={40} className="text-green-600"/></p>
+        </div>
       <div className="flex md:hidden items-center gap-5">
         <div onClick={handleMenuOpen} className="cursor-pointer">
           {isMenuOpen ? (
@@ -86,6 +87,9 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-3 text-2xl font-semibold text-gray-400">
+        <div>
+          <ToggleButton />
+        </div>
         <span>
           <IoSearch />
         </span>

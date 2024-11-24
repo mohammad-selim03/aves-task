@@ -59,7 +59,7 @@ const PropertyForm = ({ addProperty }) => {
         </Button>
       </PopoverTrigger>
       {popoverOpen && (
-        <PopoverContent className="w-96 p-4 fixed -top-80 md:top-1/2 left-0 md:-left-80 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-green-100 shadow-lg rounded-lg z-50">
+        <PopoverContent className="w-96 p-4 fixed -top-80 md:top-1/2 left-0 md:-left-80 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-green-100 shadow-lg dark:shadow-md rounded-lg z-50">
           <h4 className="font-medium leading-none mb-4 text-xl">
             Add Property
           </h4>
@@ -130,7 +130,7 @@ const PropertyForm = ({ addProperty }) => {
                 name="description"
                 value={property.description} // Bind the value correctly
                 onChange={handleChange("description")} // Pass the correct field name
-                className="border rounded px-3 py-2 w-full"
+                className="border rounded px-3 py-2 w-full dark:bg-black dark:text-white"
                 placeholder="Enter description"
                 required
               ></textarea>
