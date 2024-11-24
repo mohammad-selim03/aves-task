@@ -55,10 +55,10 @@ const Navbar = () => {
             {menusData.map((item, index) => (
               <p
                 key={index}
-                className={`capitalize cursor-pointer px-3 py-1  rounded-xl transition-all duration-300 ${
+                className={`capitalize cursor-pointer px-3 py-1  rounded-xl transition-all duration-300 dark:text-white ${
                   activeMenu === item.title
                     ? "text-green-600 bg-green-100 font-semibold"
-                    : "text-gray-500"
+                    : "text-gray-500 dark:text-white"
                 }`}
                 onClick={() => handleMenuItemClick(item.title)} // Handle item click
               >
@@ -76,7 +76,7 @@ const Navbar = () => {
             className={`capitalize cursor-pointer px-3 py-1 rounded-xl ${
               activeMenu === item.title
                 ? "text-green-600 bg-green-100 font-semibold"
-                : "text-gray-500"
+                : "text-gray-500 dark:text-white"
             }`}
             onClick={() => setActiveMenu(item.title)} // Set the clicked menu as active
           >

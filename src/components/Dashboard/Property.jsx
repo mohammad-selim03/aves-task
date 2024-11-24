@@ -90,7 +90,7 @@ const Property = ({ properties, addProperty }) => {
       ) : (
         <div className="flex items-center justify-center lg:mt-10">
           <p className="text-gray-500">
-            No properties match the selected filters.
+            No properties found .!
           </p>
         </div>
       )}

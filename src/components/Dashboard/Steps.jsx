@@ -32,6 +32,7 @@ const Steps = () => {
             bg={step.bg}
             textColor={step.textColor}
             text={step.text}
+            isStep="isStep"
           />
         ))}
       </div>

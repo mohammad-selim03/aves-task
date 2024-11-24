@@ -9,7 +9,7 @@ const DynamicCard = ({ isStep, icon, bg, textColor, text, progress }) => {
         <div className="flex flex-col gap-5">
           <div className="w-10">
             <p
-              className={`${bg} ${textColor} font-bold p-2 rounded-full flex items-center justify-center`}
+              className={`${bg} text-${textColor} font-bold p-2 rounded-full flex items-center justify-center`}
             >
               {icon}
             </p>
@@ -19,7 +19,7 @@ const DynamicCard = ({ isStep, icon, bg, textColor, text, progress }) => {
             <div className="flex items-center gap-3 w-1/2">
               <div className="w-full bg-gray-100 rounded-full h-2.5 dark:bg-gray-200">
                 <div
-                  className={`bg-${textColor} h-2.5 rounded-full`}
+                  className={`bg-${textColor.split("-")[0]}-${textColor.split("-")[1]} h-2.5 rounded-full`}
                   style={{ width: progressWidth }}
                 ></div>
               </div>
