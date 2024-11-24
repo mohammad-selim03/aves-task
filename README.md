@@ -62,3 +62,5 @@ Open your browser and navigate to:
 
 On the browser type : 
 http://localhost:3000
+
+Note : Make sure to create or add property on click "Add Property" button.
